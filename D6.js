@@ -309,6 +309,19 @@ function removeIndex(num){
   **
   ***
 */
+function halfTree(num){
+    for(let row =0;row<=num;row++){
+        let star = ''
+        for(let col=0;col<1;col++){
+            star+=' ';
+        }
+        for(let j=0;j<row;j++){
+            star+='*';
+        }
+        console.log(star);
+    }
+}
+halfTree(5);
 
 /* Ex.22 
   Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
@@ -318,10 +331,38 @@ function removeIndex(num){
    *** 
   *****
 */
+function tree(num){
+    for(let row =0;row<=num;row++){
+        let star = ''
+        for(let col=row;col<=num;col++){
+            star+=' ';
+        }
+        for(let j=0;j<(row*2)-1;j++){
+            star+='*';
+        }
+        console.log(star);
+    }
+
+}
+tree(5)
 
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
+
+// Prime number can only be divided by 1 and itself
+function isItPrime(num){
+    let s = Math.sqrt(num)
+    for (let i = 2 ; i <= s; i++){
+        console.log(i);
+        if (num % i === 0) {
+            return false;
+        }
+    } 
+    // number is bigger than 1
+    return num > 1;
+}
+console.log(isItPrime(37));
 
 /* This movies array is used throughout the exercises. Please don't change it :)  */
 const movies = [
