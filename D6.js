@@ -29,6 +29,7 @@ let sum = 10+30
 */
 
 let random = Math.floor(Math.random()*20)
+console.log(random);
 
 /* Ex.D
     Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
@@ -193,7 +194,7 @@ console.log(howManyDays('2021,6,25'));
 
 function isTodayMyBirthday(){
     const today = new Date()
-    const myBday = new Date(1989,4,21)
+    const myBday = new Date('1989,4,21')
     return myBday.getDate()== today.getDate() && myBday.getMonth()==today.getMonth() == myBday.getFullYear() == today.getFullYear()
 }
 
@@ -354,6 +355,7 @@ function tree(num){
 
 // Prime number can only be divided by 1 and itself
 function isItPrime(num){
+    // to set the range
     let s = Math.sqrt(num)
     for (let i = 2 ; i <= s; i++){
         console.log(i);
