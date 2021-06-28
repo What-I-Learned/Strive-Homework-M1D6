@@ -175,14 +175,18 @@ function rollTheDices(num){
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
 function howManyDays(d){
-    let startDate = new Date(d)
-    console.log(startDate.getDate());
-    let currDate = new Date()
     let oneDay = 1000 * 60*60*24;
-    let dayDiff = Math.round((currDate.getTime() - startDate.getTime())/oneDay);
+    let today = new Date()
+    let someDate = new Date(d)
+    console.log(someDate.getFullYear());
+
+    let dayDiff = Math.floor((today.getTime() - someDate.getTime())/oneDay);
+    console.log(`${today} - ${someDate} = ${dayDiff}`);
+ 
 
     return dayDiff
 }
+console.log(howManyDays('2021,6,25'));
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
@@ -321,7 +325,6 @@ function halfTree(num){
         console.log(star);
     }
 }
-halfTree(5);
 
 /* Ex.22 
   Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
@@ -344,7 +347,6 @@ function tree(num){
     }
 
 }
-tree(5)
 
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
@@ -362,7 +364,6 @@ function isItPrime(num){
     // number is bigger than 1
     return num > 1;
 }
-console.log(isItPrime(37));
 
 /* This movies array is used throughout the exercises. Please don't change it :)  */
 const movies = [
