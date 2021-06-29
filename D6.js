@@ -197,6 +197,7 @@ function isTodayMyBirthday(){
     const myBday = new Date('1989,4,21')
     return myBday.getDate()== today.getDate() && myBday.getMonth()==today.getMonth() == myBday.getFullYear() == today.getFullYear()
 }
+console.log(isTodayMyBirthday()) 
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
